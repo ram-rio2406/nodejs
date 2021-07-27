@@ -34,12 +34,14 @@ readFile('./textFiles/first.txt','utf8',(err,result)=>{
     if(err)
     {
         console.log(err);
+        return
     }
     console.log(result);
     writeFile('./textFiles/second.txt',`Hi i am second file ${result}`,(err,result)=>{
         if(err)
         {
             console.log(err);
+            return
         }
         console.log(result);
     })
@@ -68,4 +70,4 @@ server.listen(5000);
 const npm = require('lodash')
 
 const arr = [1,[2,[3,[4]]]];
-console.log('ADSF',npm.flattenDeep(arr));
+console.log('AD',npm.flattenDeep(arr));
